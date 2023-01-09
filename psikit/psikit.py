@@ -79,7 +79,7 @@ class Psikit(object):
         self.mol = self.xyz2mol()
 
         if not self.debug:
-            self.psi4.core.opt_clean() # Seg fault will occured when the function is called before optimize.
+            self.psi4.core.clean() # Seg fault will occured when the function is called before optimize.
         return scf_energy
 
     def set_options(self, **kwargs):
